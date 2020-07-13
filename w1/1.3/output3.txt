@@ -1,0 +1,7 @@
+mon		tus		wed		thu		fri		sat		sun
+Average temperature:
+72.9792		74.0417		73.3		74.0583		73.1917		74.0667		73.7083		
+High temperature:
+80.5		82.2		80.2		83.2		79.6		85.5		80.2		
+Low temperature:
+67		67.2		67		67.1		65		67.3		67.2		
