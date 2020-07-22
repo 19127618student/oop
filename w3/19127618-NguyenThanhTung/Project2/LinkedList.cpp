@@ -11,6 +11,7 @@ Node* LinkedList::CreateNode(const int& n)
 	Node* p = new Node;
 	p->data = n;
 	p->pNext = NULL;
+	p->pPrev = NULL;
 	return p;
 }
 Node* LinkedList::AddHead(const int& n)
@@ -20,6 +21,7 @@ Node* LinkedList::AddHead(const int& n)
 		pHead = pTail = p;
 	}
 	else {
+		pHead->pPrev = p;
 		p->pNext = pHead;
 		pHead = p;
 	}
@@ -33,6 +35,7 @@ Node* LinkedList::AddTail(const int& n)
 		pHead = pTail = p;
 	}
 	else {
+		p->pPrev = pTail;
 		pTail->pNext = p;
 		pTail = p;
 	}
