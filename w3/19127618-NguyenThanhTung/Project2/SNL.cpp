@@ -152,6 +152,7 @@ SoNguyenLon operator-(const int&snl, const SoNguyenLon&snl2)
 	SoNguyenLon snl1(snl);
 	return snl1 - snl2;
 }
+
 SoNguyenLon nhanNho(int a,const SoNguyenLon s)
 {
 	SoNguyenLon snlKQ;
@@ -164,7 +165,6 @@ SoNguyenLon nhanNho(int a,const SoNguyenLon s)
 		temp = temp / 10;
 		b.pTail = b.pTail->pPrev;
 	}
-
 	if (temp > 0)
 	{
 		snlKQ.AddHead(temp);
