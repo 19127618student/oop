@@ -20,7 +20,7 @@ ostream& operator<<(ostream& os,const Ps2&ps)
 	os << (Ps1)ps;
 	return os;
 }
-istream& operator>>(istream& is, Ps2&ps)
+istream& operator>>(istream& is, Ps2& ps)
 {
 	char s, t;
 	is >> s;
@@ -29,6 +29,11 @@ istream& operator>>(istream& is, Ps2&ps)
 	is >> ps.tu;
 	is >> t;
 	is >> ps.mau;
+	if (ps.sign == 0 && ps.mau < 0) ps.sign = 1;
+	else if (ps.sign == 0 && ps.mau > 0) ps.sign = 0;
+	else if (ps.sign == 1 && ps.mau < 0) ps.sign = 0;
+	else if (ps.sign == 1 && ps.mau > 0) ps.sign = 1;
+	ps.mau = abs(ps.mau);
 	return is;
 }
 Ps2 Ps2::operator-(const Ps2& ps)
