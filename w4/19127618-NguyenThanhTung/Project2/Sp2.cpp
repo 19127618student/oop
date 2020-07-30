@@ -44,7 +44,7 @@ SP2 SP2::operator/(const SP2&sp)
 }
 bool SP2::operator==(const SP2&sp)
 {
-	if (sp.Real == this->Real && sp.Imaginary == this->Imaginary) return 1;
+	if (distance(*this) == distance(sp)) return 1;
 	else return 0;
 }
 bool SP2::operator!=(const SP2&sp)
@@ -52,6 +52,28 @@ bool SP2::operator!=(const SP2&sp)
 	if (*this == sp)return 0;
 	else return 1;
 }
+bool SP2::operator<(const SP2&sp)
+{
+	if (distance(*this) < distance(sp))return 1;
+	else return 0;
+}
+bool SP2::operator>(const SP2&sp)
+{
+	if (distance(*this) > distance(sp))return 1;
+	else return 0;
+}
+bool SP2::operator<=(const SP2&sp)
+{
+	if (*this > sp) return 0;
+	else return 1;
+}
+bool SP2::operator>=(const SP2&sp)
+{
+	if (*this < sp)return 0;
+	else return 1;
+}
+
+
 SP2 SP2::operator++()
 {
 	++this->Real;

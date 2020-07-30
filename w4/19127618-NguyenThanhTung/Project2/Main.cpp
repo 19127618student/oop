@@ -19,5 +19,17 @@ int main()
 	cout << "x - y = " << x - y << endl;
 	cout << "x * y = " << x * y << endl;
 	cout << "x / y = " << x / y << endl;
+
+	cout << endl;
+	cout << "\nCompare by distance to center (0,0)\n\n";
+	if (x == y) {
+		cout << "x equals y \n";
+	}
+	else {
+		cout << "x differs from y and ";
+		if (x > y)cout << "x is greater than y\n";
+		else if (x < y) cout << "x is smaller than y\n";
+	}
+	cout << endl;
 	return 0;
 }

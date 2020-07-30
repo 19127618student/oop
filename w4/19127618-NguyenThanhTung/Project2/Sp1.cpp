@@ -18,3 +18,7 @@ void SP1::displaySP()
 {
 	cout << Real << " + " << Imaginary << " i";
 }
+double SP1::distance(const SP1& sp)
+{
+	return sqrt((sp.Real * sp.Real) + (sp.Imaginary * sp.Imaginary));
+}

@@ -13,6 +13,7 @@ public:
 	SP1(double Re);
 	SP1(double Re, double Im);
 	void displaySP();
+	double distance(const SP1& sp);
 };
 
 class SP2:public SP1
