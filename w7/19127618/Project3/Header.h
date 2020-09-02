@@ -7,7 +7,7 @@ class Mammal
 {
 public:
 	Mammal();
-	virtual ~Mammal();
+	 ~Mammal();
 	virtual void move()const;
 	virtual void speak()const;
 };
